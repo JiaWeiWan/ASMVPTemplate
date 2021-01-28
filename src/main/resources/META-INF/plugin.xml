@@ -1,19 +1,26 @@
 <idea-plugin>
-    <id>com.github.jiaweiwan.asmvvmtemplate</id>
+    <id>com.xxkj.renrenxiangxue</id>
     <name>ASMVVMTemplate</name>
-    <vendor>jiaweiwan</vendor>
+    <vendor>xxkj</vendor>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>org.jetbrains.android</depends>
+    <depends>org.jetbrains.kotlin</depends>
+    <depends>com.intellij.modules.java</depends>
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.jiaweiwan.asmvvmtemplate.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.jiaweiwan.asmvvmtemplate.services.MyProjectService"/>
+        <applicationService serviceImplementation="com.xxkj.renrenxiangxue.services.MyApplicationService"/>
+        <projectService serviceImplementation="com.xxkj.renrenxiangxue.services.MyProjectService"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.jiaweiwan.asmvvmtemplate.listeners.MyProjectManagerListener"
+        <listener class="com.xxkj.renrenxiangxue.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
+
+    <extensions defaultExtensionNs="com.android.tools.idea.wizard.template">
+        <wizardTemplateProvider implementation="com.xxkj.renrenxiangxue.other.SamplePluginTemplateProviderImpl" />
+    </extensions>
 </idea-plugin>
