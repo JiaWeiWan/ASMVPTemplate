@@ -1,6 +1,6 @@
-package org.jetbrains.plugins.template.services
+package com.github.jiaweiwan.asmvvmtemplate.services
 
-import org.jetbrains.plugins.template.MyBundle
+import com.github.jiaweiwan.asmvvmtemplate.MyBundle
 
 class MyApplicationService {
 
